@@ -1,7 +1,7 @@
 import React from 'react';
 
 class SearchBar extends React.Component {
-  state = { term: '' };
+  state = { term: 'javascript' };
 
   // onInputChange(event) {
   //   console.log(event.target.value);
@@ -13,16 +13,12 @@ class SearchBar extends React.Component {
   };
 
   componentDidMount() {
-    console.log('Componend was rendered to screen...');
+    this.props.userSubmit(this.state.term);
   }
 
-  componentDidUpdate() {
-    console.log('Console just updated and rerendered!');
-  }
+  componentDidUpdate() {}
 
-  componentWillUnmount() {
-    console.log('Component unmounted...');
-  }
+  componentWillUnmount() {}
 
   render() {
     return (
